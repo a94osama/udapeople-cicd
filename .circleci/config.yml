@@ -229,12 +229,12 @@ jobs:
       - image: cimg/node:13.8.0
     steps:
       - checkout
+      - restore_cache
       - install_awscli    
       - run:
           name: Run migrations
           command: |
             cd backend
-            npm cache clean --force
             npm install
             npm audit fix --force --audit-level=critical
             npm audit fix --force --audit-level=critical
