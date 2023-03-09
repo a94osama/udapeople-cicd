@@ -401,7 +401,7 @@ jobs: #now we will bbuild our jobs
       - destroy-environment
       - revert-migrations  
       
-  cleanup: # createe cleanup
+  cleanup: # createe cleanup 
     docker:
       - image: amazon/aws-cli
     steps:
